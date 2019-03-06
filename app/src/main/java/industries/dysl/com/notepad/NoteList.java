@@ -13,6 +13,7 @@ public class NoteList {
     public boolean loadNote(Context context){
         return true;
     }
+
     public void saveNote(Context context) {
         File directory = new File(context.getFilesDir(), "notes");
         if (!directory.exists()) {

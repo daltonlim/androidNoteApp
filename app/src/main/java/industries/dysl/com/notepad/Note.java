@@ -7,10 +7,12 @@ import java.util.Date;
 
 public class Note implements Serializable {
     private String title;
-    private Content note;
+    private Sting note;
     private long creation;
 
-    public Note(String title, Content note, long creation) {
+
+
+    public Note(String title, Sting note, long creation) {
         this.title = title;
         this.note = note;
         this.creation = creation;
@@ -20,7 +22,7 @@ public class Note implements Serializable {
         return title;
     }
 
-    public Content getNote() {
+    public Sting getNote() {
         return note;
     }
 
