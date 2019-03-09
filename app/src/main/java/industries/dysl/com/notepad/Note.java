@@ -7,22 +7,32 @@ import java.util.Date;
 
 public class Note implements Serializable {
     private String title;
-    private Sting note;
+    private String note;
     private long creation;
 
 
-
-    public Note(String title, Sting note, long creation) {
+    public Note(String title, String note) {
         this.title = title;
         this.note = note;
-        this.creation = creation;
+        updateCreation();
+
     }
+    private void updateCreation(){
+        creation = System.currentTimeMillis();
+    }
+
+    public void updateNote(String title, String note) {
+        this.title = title;
+        this.note = note;
+        updateCreation();
+    }
+
 
     public String getTitle() {
         return title;
     }
 
-    public Sting getNote() {
+    public String getNote() {
         return note;
     }
 
